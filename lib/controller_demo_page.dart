@@ -17,7 +17,7 @@ class ControllerDemoPage extends StatelessWidget {
             controller: controller,
             decoration: InputDecoration(
                 hintText: "请输入文本",
-                hintStyle: TextStyle(fontSize: 15, color: Colors.red)),
+                hintStyle: TextStyle(fontSize: 13, color: Colors.red)),
             style: TextStyle(fontSize: 13, color: Colors.black),
           ),
         ),

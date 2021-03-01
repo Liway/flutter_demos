@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'controller_demo_page.dart';
+import 'clip_Image.dart';
+import 'scroll_listener_page.dart';
+import 'scroll_to_index_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,8 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Home Page'),
       routes: routers,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -65,5 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
 Map<String, WidgetBuilder> routers = {
   "文本框输入": (BuildContext context) {
     return new ControllerDemoPage();
+  },
+  "不同组合实现圆角": (context) {
+    return new ClipImagePage();
+  },
+  "列表滑动监听": (context) {
+    return new ScrollListenerPage();
+  },
+  "滑动到指定位置": (context) {
+    return new ScrollToIndexPage();
   }
 };

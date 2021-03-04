@@ -3,6 +3,14 @@ import 'controller_demo_page.dart';
 import 'clip_Image.dart';
 import 'scroll_listener_page.dart';
 import 'scroll_to_index_page.dart';
+import 'ScrollToIndexPage2.dart';
+import 'transform_page.dart';
+import 'text_line_height_page.dart';
+import 'RefreshPage.dart';
+import 'refresh_page2.dart';
+import 'refresh_page3.dart';
+import 'positioned_page.dart';
+import 'bubble_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -49,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).pushNamed(routeLIsts[index]);
               },
               child: new Card(
-                margin: EdgeInsets.all(10),
+                margin: EdgeInsets.all(5),
                 child: new Container(
                   alignment: Alignment.centerLeft,
                   margin: EdgeInsets.symmetric(horizontal: 10),
@@ -78,5 +86,29 @@ Map<String, WidgetBuilder> routers = {
   },
   "滑动到指定位置": (context) {
     return new ScrollToIndexPage();
+  },
+  "滑动到指定位置2": (context) {
+    return new ScrollToIndexPage2();
+  },
+  "Transform 移动效果": (context) {
+    return new TransformPage();
+  },
+  "TextLineHeight计算文本间距": (context) {
+    return new TextLineHeightPage();
+  },
+  "刷新": (context) {
+    return new RefreshPage();
+  },
+  "刷新2": (context) {
+    return new RefreshPage2();
+  },
+  "刷新3": (context) {
+    return new RefreshPage3();
+  },
+  "绝对定位": (context) {
+    return new PositionedPage();
+  },
+  "气泡弹窗": (context) {
+    return new BubblePage();
   }
 };

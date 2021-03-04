@@ -30,8 +30,8 @@ class _ScrollToIndexPageState extends State<ScrollToIndexPage> {
             Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),
         axis: scrollDirection);
     randomList = List.generate(maxCount,
-        (index) => <int>[index, (100000 * random.nextDouble().toInt())]);
-    print(random.nextDouble().toInt());
+        (index) => <int>[index, (1000 * random.nextDouble().toInt())]);
+    
   }
 
   Widget _getRow(int index, double height) {

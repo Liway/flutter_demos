@@ -87,6 +87,7 @@ class BubblePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    print(MediaQuery.of(context).size.height);
     return Scaffold(
       appBar: AppBar(
         title: new Text("BubblePage"),
@@ -104,18 +105,14 @@ class BubblePage extends StatelessWidget {
                 showDialog(
                     context: context,
                     builder: (context) {
-                      return MaterialButton(
-                        color: Colors.red,
-                        onPressed: () {},
+                      return BubbleDialog(
+                        "Text1",
+                        height: bubbleHeight,
+                        width: bubbleWidth,
+                        arrowLocation: ArrowLocation.TOP,
+                        x: getX(button1Key) + getWidth(button1Key) / 2,
+                        y: getY1(),
                       );
-                      // return BubbleDialog(
-                      //   "Text1",
-                      //   height: bubbleHeight,
-                      //   width: bubbleWidth,
-                      //   arrowLocation: ArrowLocation.TOP,
-                      //   x: getX(button1Key) + getWidth(button1Key) / 2,
-                      //   y: getY1(),
-                      // );
                     });
               },
               color: Colors.blue,
@@ -186,7 +183,8 @@ class BubblePage extends StatelessWidget {
                   Theme.of(context).buttonTheme.minWidth / 2,
               top: MediaQuery.of(context).size.height / 2 -
                   MediaQuery.of(context).padding.top -
-                  kToolbarHeight,
+                  kToolbarHeight -
+                  Theme.of(context).buttonTheme.height / 2,
             )
           ],
         ),

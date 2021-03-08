@@ -153,7 +153,7 @@ class _BubbleTipWidgetState extends State<BubbleTipWidget>
           margin: EdgeInsets.only(left: x, top: y),
           child: new Stack(
             children: <Widget>[
-              ///绘制气泡背景
+              // /绘制气泡背景
               CustomPaint(
                   key: paintKey,
                   size: new Size(widget.width, widget.height),

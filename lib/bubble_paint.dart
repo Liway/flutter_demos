@@ -68,10 +68,10 @@ class BubblePainter extends CustomPainter {
       mArrowPosition = (rect.bottom - rect.top) / 2 - mArrowHeight / 2;
     }
     path.moveTo(rect.left + mArrowWidth, mArrowHeight + mArrowPosition);
-    path.lineTo(rect.left + mArrowWidth, mArrowHeight + mArrowPosition);
+    // path.lineTo(rect.left + mArrowWidth, mArrowHeight + mArrowPosition);
     path.lineTo(rect.left, mArrowPosition + mArrowHeight / 2);
     path.lineTo(rect.left + mArrowWidth, mArrowPosition);
-    path.lineTo(rect.left + mArrowWidth, rect.top + mAngle);
+    // path.lineTo(rect.left + mArrowWidth, rect.top + mAngle);
 
     path.addRRect(RRect.fromLTRBR(rect.left + mArrowHeight, rect.top,
         rect.right, rect.bottom, Radius.circular(mAngle)));

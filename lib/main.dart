@@ -11,6 +11,8 @@ import 'refresh_page2.dart';
 import 'refresh_page3.dart';
 import 'positioned_page.dart';
 import 'bubble_page.dart';
+import 'keyboard_page.dart';
+import 'anima_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -110,5 +112,11 @@ Map<String, WidgetBuilder> routers = {
   },
   "气泡弹窗": (context) {
     return new BubblePage();
+  },
+  "弹出键盘": (context) {
+    return new KeyBoardPage();
+  },
+  "动画": (context) {
+    return new AnimaDemoPage();
   }
 };

@@ -13,7 +13,6 @@ import 'positioned_page.dart';
 import 'bubble_page.dart';
 import 'keyboard_page.dart';
 import 'anima_page.dart';
-import 'custiom_multi_render_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -119,8 +118,5 @@ Map<String, WidgetBuilder> routers = {
   },
   "动画": (context) {
     return new AnimaDemoPage();
-  },
-  "自定义布局": (context) {
-    return new CustomMultiRenderPage();
   }
 };

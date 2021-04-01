@@ -14,6 +14,10 @@ import 'bubble_page.dart';
 import 'keyboard_page.dart';
 import 'anima_page.dart';
 import 'custiom_multi_render_page.dart';
+import 'list_animation_page.dart';
+import 'mine_page.dart';
+import 'expand_list.dart';
+import 'sliver_header.dart';
 
 void main() {
   runApp(MyApp());
@@ -122,5 +126,17 @@ Map<String, WidgetBuilder> routers = {
   },
   "自定义布局": (context) {
     return new CustomMultiRenderPage();
+  },
+  "列表NavBar滚动定位动画": (context) {
+    return new ListAnimationPage();
+  },
+  "个人中心": (context) {
+    return new MineDemo();
+  },
+  'popMenu': (context) {
+    return new FlowPopMenu();
+  },
+  "滚动headerSliver": (context) {
+    return new SliverHeader();
   }
 };
